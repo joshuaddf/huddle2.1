@@ -30,7 +30,6 @@ export const Button = ({ children, size, className }: ButtonProps) => {
 
     return (
         <button
-
             className={twMerge("rounded-full", className, scrolled ? "text-[0.7rem] px-4 duration-300 transition-all py-2" : buttonSizes[size])}>
             { children }
         </button>

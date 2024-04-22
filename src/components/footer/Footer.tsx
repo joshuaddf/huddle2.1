@@ -9,8 +9,8 @@ import email from "/public/images/icon-email.svg"
 import Link from "next/link"
 import { openSans, poppins } from "../fonts/page";
 import { useEffect, useState } from "react";
-import smirk from "/public/smirk.gif"
 import { motion, AnimatePresence } from "framer-motion"
+import cat from "/public/cat.jpg"
 
 export const Footer = () => {
 
@@ -98,8 +98,9 @@ export const Modal = ({ handleClose }: any) => {
                 className="absolute inset-0 flex items-center justify-center rounded-2xl top-[3.7rem] left-0 bg-pink h-[230px] w-[350px] mx-auto lg:h-[250px] lg:w-[350px] p-3">
                 <div className="flex items-center justify-center">
                     <Image className="rounded-lg"
-                        src={smirk}
-                        alt="smirk"
+                        src={cat}
+                        alt="cat"
+
                         height={200}
                         width={200}
                     />

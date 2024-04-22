@@ -1,18 +1,40 @@
+'use client'
+
 import { Container } from '@/components/container/Container'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from "next/image"
-import shrek from "/public/shrek.gif"
+import { Navbar } from '@/components/header/Navbar'
+import { Footer } from '@/components/footer/Footer'
+import { Loader } from '@/components/loader/Loader'
+import drake from "/public/drake.jpg"
 
 const FreePage = () => {
-  return (
-    <div className='h-[90vh] flex items-center justify-center -mt-[8rem]'>
-      <Container>
-        <Image
-        src={shrek}
-        alt='shrek'
-         />
-      </Container>
-    </div>
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchpage = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2500);
+    }
+
+    fetchpage();
+  }, [])
+
+  return isLoading ? <Loader /> : (
+    <>
+        <Navbar />
+        <div className='h-[90vh] flex items-center justify-center -mt-[8rem]'>
+          <Container>
+            <Image
+              src={drake}
+              alt='shrek'
+            />
+          </Container>
+        </div>
+        <Footer />
+    </>
   )
 }
 

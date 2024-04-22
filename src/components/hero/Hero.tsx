@@ -11,27 +11,13 @@ import { buttonVariants, heroImgVariants } from "../variants/Variants";
 import Image from "next/image"
 import heroImage from "/public/images/screen-mockups.svg"
 import {  useEffect, useRef, useState } from "react";
-import Lenis from "@studio-freight/lenis";
 import { Numbers } from "../numbers/Numbers";
 
 export const Hero = () => {
 
-    useEffect(() => {
-        const lenis = new Lenis();
-
-        function raf(time: any) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
-    }, [])
-
     const container = useRef(null);
     const { scrollYProgress } = useScroll();
     let y = useTransform(scrollYProgress, [0, 1], ["0%", "-150%"]);
-    // let o = useTransform(scrollYProgress , [0, 1], [1, 0.6]);
-
 
     return (
         <header className="">
@@ -45,15 +31,8 @@ export const Hero = () => {
                         "users as you engage in genuine discussion. "
                     ]} />
                 </motion.div>
-                {/* <div className="hidden lg:block lg:w-[40%]">
-                <HeroPara className="font-normal" paraText={[
-                    "Huddle re-imagines the way we build communities. You have a ",
-                    "voice, but so does your audience. Create connections with your",
-                    "users as you engage in genuine discussion."
-                ]} />
-                </div> */}
                 <motion.div
-                    variants={buttonVariants} initial="initial" animate="animate" className="no-wrap">
+                    variants={buttonVariants} initial="initial" animate="animate">
                     <Button className={`bg-pink text-nowrap mx-auto text-white shadow-xl hover:bg-lightPink font-bold ${openSans.className}`} size="large"><Link href="/free">Get Started For Free</Link></Button>
                 </motion.div>
 

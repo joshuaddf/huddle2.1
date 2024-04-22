@@ -29,14 +29,14 @@ export const Users = () => {
                 <div className="flex flex-col lg:gap-14 h-[80vh] mx-auto justify-center lg:flex-row items-center gap-4">
                     <motion.div initial={{ y: 10, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.2 }} className="text-center lg:text-start flex-1 h-48  order-2 lg:order-1">
+                        transition={{ delay: 0.3 }} className="text-center lg:text-start flex-1 h-48  order-2 lg:order-1">
                         <h2 className={`${poppins.className} text-2xl lg:text-4xl font-bold flex-1 py-8`}>Your Users</h2>
                         <p className={`${openSans.className} text-sm md:text-[1rem] md:w-2/3 lg:w-auto mx-auto lg:text-lg`}>It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
                     </motion.div>
                     <motion.div
                         initial={{ y: 10, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.4 }}
+                        transition={{ delay: 0.6 }}
                         className="flex-1 lg:order-1 pt-12">
                         <Image
                             src={userImg}
